@@ -1,0 +1,31 @@
+image: oven/bun:slim
+
+stages:
+  - test
+  - deploy
+
+sast:
+  stage: test
+include:
+  - template: Security/SAST.gitlab-ci.yml
+
+pages:
+  stage: deploy
+  script:
+    - bun install # install dependencies
+    - bun run build # build the app
+    - cp -a .vitepress/dist/. public/
+  cache:
+    key:
+      files:
+        - bun.lockb
+    paths:
+      - node_modules
+  artifacts:
+    paths:
+      # The folder that contains the files to be exposed at the Page URL
+      - public
+  rules:
+    # This ensures that only pushes to the default branch will trigger
+    # a pages deploy
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
