@@ -6,10 +6,19 @@ const en = defineConfig({
 	description: "Patterns and programming techniques",
 
 	themeConfig: {
-		// https://vitepress.dev/reference/default-theme-config
-		nav: [],
+		nav: [
+			{
+				text: "Patterns",
+				link: "/ru/patterns/composite-proxy",
+			},
+		],
 
-		sidebar: [],
+		sidebar: [
+			{
+				text: "Patterns",
+				items: [{ text: "Composite proxy", link: "/patterns/composite-proxy" }],
+			},
+		],
 
 		editLink: {
 			pattern: "https://github.com/SX-3/sxcode/edit/main/docs/:path",

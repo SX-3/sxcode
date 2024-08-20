@@ -4,17 +4,15 @@ layout: home
 
 hero:
   name: "SXCode"
-  text: "Пошаговые уроки по написанию кода"
-  tagline: Как я его вижу
+  text: "Patterns and code examples"
+  tagline: How I see it
   actions:
     - theme: brand
-      text: Начать
-      link: /guides/intro
+      text: Start
+      link: /patterns/composite-proxy
 features:
-  - title: Минимализм
-    details: Учимся не тянуть лишнего в проект, писать с минимом зависимостей
-  - title: Понятный код
-    details: Всё написано с подробными комментариями, ссылками, тестами
-  - title: Открыто для нового
-    details: Легко дорабатывать и развивать представленные решения
+  - title: Patterns
+    details: I show how to use existing patterns, I share my developments
+  - title: It's clear
+    details: Everything is written with detailed comments and links
 ---
