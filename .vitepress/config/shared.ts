@@ -3,7 +3,7 @@ import { transformerTwoslash } from "@shikijs/vitepress-twoslash";
 
 const shared = defineConfig({
 	title: "SX Code",
-	//base: "/sxcode",
+	base: "/sxcode",
 	rewrites: {
 		"en/:rest*": ":rest*",
 	},
