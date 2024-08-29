@@ -13,7 +13,7 @@ class Databse extends IDBDatabase {}
 ```
 
 This code will return an `Illegal constructor` error.
-What other options are there? Throw all the properties of the object:
+What other options are there? Override all the properties of the object:
 
 ::: details Lots of code
 
